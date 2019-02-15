@@ -1,2 +1,16 @@
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+wercker
 .wercker
-.terraform
+.werckertests
+.DS_STORE
+/vendor/**
+!/vendor/vendor.json
+Gopkg.lock
+Gopkg.toml

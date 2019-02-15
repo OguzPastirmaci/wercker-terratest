@@ -6,12 +6,10 @@ build:
   # The steps that will be executed on build
   steps:
 
-    # golint step!
-    - wercker/golint
-
     # Test the project
     - script:
         name: go test
         code: |
-          dep ensure -add github.com/gruntwork-io/terratest/modules/terraform
-          go test ./...
+          cd test
+          go get -t -d -v ./...
+          go test -v -run TestTerraformBasicExample
